@@ -6,13 +6,12 @@ int main () {
 
 // Movimento da Torre - 5 casas para a direita
     printf("Movimento da Torre:\n");
-    for (int T = 0; T < 5; T++) 
-    {
+    for (int T = 0; T < 5;  T++)
+            {
         printf("Direita!\n");
     }
 
     printf("\n");
-
 
     int B = 0;
 // Movimento do Bispo - 5 casas para cima e direta
@@ -31,7 +30,7 @@ int main () {
     printf("Movimento da Rainha: \n");
     while (R <= 8)
     {
-        printf("Esquerda\n");
+        printf("Esquerda!\n");
         R++;
     }
 
