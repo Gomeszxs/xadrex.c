@@ -34,5 +34,25 @@ int main () {
         R++;
     }
 
+    printf("\n");
+
+//Movimento do Cavalo - 2 casas para baixo e uma casa para esquerda
+
+    int C, L;
+    
+    printf("Movimento do cavalo: \n");
+    
+    for(C = 1; C <= 2; C++) 
+    {
+        while (L < C)
+        {
+            printf("Baixo!\n");
+            L++;
+        }
+    }
+    {   
+        printf("Esquerda!\n");
+    }
+
     return 0;
 }
