@@ -1,39 +1,56 @@
 #include <stdio.h>
 
+//Recursividade para o movimento da Torre.
+void MovT (int casas1)
+{
+    if (casas1 > 0)
+    {
+        printf("Direira!\n");
+        MovT(casas1 - 1);
+    }    
+}
+
+//Recursividade para o movimento do Bispo.
+void MovB (int casas2)
+{
+    if (casas2 > 0)
+    {
+        printf("Cima, Direita!\n");
+        MovB(casas2 - 1);
+    }
+}
+
+//Recursividade para o movimento da Rainha.
+void MovR (int casas3) 
+{   
+    if (casas3 > 0)
+    {
+        printf("Esquerda\n");
+        MovT(casas3 - 1);
+    }   
+}
+
+
 int main () { 
    
     printf("Bem-vindo ao jogo de xadrex !!!\n");
+    printf("\n");
+    
 
 // Movimento da Torre - 5 casas para a direita
     printf("Movimento da Torre:\n");
-    for (int T = 0; T < 5;  T++)
-            {
-        printf("Direita!\n");
-    }
-
+    MovT(5);
     printf("\n");
 
-    int B = 0;
 // Movimento do Bispo - 5 casas para cima e direta
     printf("Movimento do Bispo: \n");
-    do
-    {
-        printf("Cima, direita!\n");
-        B++;
-    } while (B <= 5);
-
+    MovB(5);
     printf("\n");
 
+
 //Movimento da Rainha - 8 casas para esquerda
-
-    int R = 0;
-    printf("Movimento da Rainha: \n");
-    while (R <= 8)
-    {
-        printf("Esquerda!\n");
-        R++;
-    }
-
+    printf("Movimento da Rainha\n");
+    MovT(8);
     printf("\n");
 
 //Movimento do Cavalo - 2 casas para baixo e uma casa para esquerda
@@ -46,7 +63,7 @@ int main () {
     {
         while (L < C)
         {
-            printf("Baixo!\n");
+            printf("cima!\n");
             L++;
         }
     }
